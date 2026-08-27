@@ -13,7 +13,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 # =========================================================
 st.set_page_config(
     page_title="Previsão de Preço de Veículos Usados",
-    page_icon="🚗",
+    # page_icon="🚗",
     layout="wide"
 )
 
@@ -87,7 +87,7 @@ residuos = y_test.to_numpy() - pred_test
 # =========================================================
 # Cabeçalho
 # =========================================================
-st.title("🚗 Previsão de Preço de Veículos Usados")
+st.title("Previsão de Preço de Veículos Usados")
 
 st.write(
     """
@@ -346,7 +346,7 @@ if enviar:
 
     if fora_intervalo:
         st.warning(
-            "⚠️ Atenção: há entrada fora do intervalo observado na base. "
+            "Atenção: há entrada fora do intervalo observado na base. "
             "A previsão é uma extrapolação e pode ser pouco confiável.\n\n"
             + "\n\n".join(f"- {item}" for item in fora_intervalo)
         )
